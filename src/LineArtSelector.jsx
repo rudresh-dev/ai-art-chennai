@@ -196,10 +196,10 @@ const LineArtSelector = ({ onLineArtSelect }) => {
       src: "/a4.png",
       text: "Anime",
       subImages: [
-        { src: "/aa3.png", icon: "/d/d1.svg", text: "Naruto" },
-        { src: "/aa1.png", icon: "/d/d3.svg", text: "A cow body" },
-        { src: "/aa2.png", icon: "/d/d3.svg", text: "A cow tail" },
-        { src: "/aa4.png", icon: "/d/d4.svg", text: "A cow legs" },
+        { src: "/c/dd1.svg", icon: "/c/d1.svg", text: "Anime Boy" },
+        { src: "/c/d2.svg", icon: "/c/dd2.svg", text: "Anime Boy" },
+        { src: "/c/d3.svg", icon: "/c/dd3.svg", text: "Anime Girl" },
+        { src: "/c/d44.svg", icon: "/c/d4.svg", text: "Anime Girl" },
       ],
     },
   ];

@@ -218,7 +218,7 @@ const DrawingApp = () => {
   const uploadToSupabase = async (blob) => {
     const fileName = `generated_${Date.now()}.png`; // Unique file name
     const { data, error } = await supabase.storage
-      .from("images") // Ensure this is your bucket name
+      .from("images/chennai") // Ensure this is your bucket name
       .upload(fileName, blob, {
         cacheControl: "3600",
         upsert: false,
@@ -229,7 +229,18 @@ const DrawingApp = () => {
       return null;
     }
 
-    const publicURL = `https://mxyippuwkpysdexmxrbm.supabase.co/storage/v1/object/public/images/${fileName}`;
+    // const publicURL = `https://mxyippuwkpysdexmxrbm.supabase.co/storage/v1/object/public/images/${fileName}`;
+    // return publicURL;
+
+
+    const publicURL = `https://mxyippuwkpysdexmxrbm.supabase.co/storage/v1/object/public/images/chennai/${fileName}`;
+    const { error: insertError } = await supabase
+          .from('chennai')
+          .insert([{ url: publicURL }]);
+
+        if (insertError) {
+          console.error('Insert error:', insertError);
+        } 
     return publicURL;
   };
 

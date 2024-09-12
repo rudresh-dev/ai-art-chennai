@@ -777,7 +777,7 @@ const DrawingApp = () => {
                               : "transparent",
                         }}
                       >
-                        Automibile
+                        Automobile
                       </div>
                       <div
                         onClick={() => handlePromptSelect("Anime")}
